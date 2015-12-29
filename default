@@ -1,0 +1,13 @@
+<VirtualHost *:80>
+	ServerAdmin mail@strike-art.ru
+	DocumentRoot /jail/default/public_html
+	<Directory /jail/default/public_html/>
+		Options -Indexes
+	</Directory>
+	ErrorLog /jail/default/logs/error.log
+	CustomLog /jail/default/logs/access.log combined
+	AssignUserId default www-data
+	php_admin_value open_basedir "/jail/default/:."
+	php_admin_value upload_tmp_dir "/jail/default/tmp"
+	php_admin_value session.save_path "/jail/default/tmp"
+</VirtualHost>
