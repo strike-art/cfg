@@ -10,4 +10,5 @@
 	php_admin_value open_basedir "/jail/default/:."
 	php_admin_value upload_tmp_dir "/jail/default/tmp"
 	php_admin_value session.save_path "/jail/default/tmp"
+	php_value output_buffering Off
 </VirtualHost>
